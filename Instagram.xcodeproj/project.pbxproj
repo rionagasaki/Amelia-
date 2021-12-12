@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1956C1C2272FA32B00DB3A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C1C1272FA32B00DB3A48 /* AppDelegate.swift */; };
+		1956C1C4272FA32B00DB3A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C1C3272FA32B00DB3A48 /* SceneDelegate.swift */; };
+		1956C1C9272FA32B00DB3A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956C1C7272FA32B00DB3A48 /* Main.storyboard */; };
+		1956C1CE272FA32D00DB3A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956C1CC272FA32D00DB3A48 /* LaunchScreen.storyboard */; };
+		1956C24C272FA7AB00DB3A48 /* RequestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C227272FA7AB00DB3A48 /* RequestedViewController.swift */; };
+		1956C24D272FA7AB00DB3A48 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C228272FA7AB00DB3A48 /* FriendViewController.swift */; };
+		1956C24E272FA7AB00DB3A48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1956C229272FA7AB00DB3A48 /* GoogleService-Info.plist */; };
+		1956C250272FA7AB00DB3A48 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C22B272FA7AB00DB3A48 /* CommentTableViewCell.swift */; };
+		1956C251272FA7AB00DB3A48 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956C22C272FA7AB00DB3A48 /* CommentTableViewCell.xib */; };
+		1956C252272FA7AB00DB3A48 /* Following.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C22D272FA7AB00DB3A48 /* Following.swift */; };
+		1956C253272FA7AB00DB3A48 /* PostMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C22E272FA7AB00DB3A48 /* PostMapViewController.swift */; };
+		1956C254272FA7AB00DB3A48 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C22F272FA7AB00DB3A48 /* SettingViewController.swift */; };
+		1956C255272FA7AB00DB3A48 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C230272FA7AB00DB3A48 /* NotificationTableViewCell.swift */; };
+		1956C256272FA7AB00DB3A48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C231272FA7AB00DB3A48 /* HomeViewController.swift */; };
+		1956C257272FA7AB00DB3A48 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C232272FA7AB00DB3A48 /* PostTableViewCell.swift */; };
+		1956C258272FA7AB00DB3A48 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C233272FA7AB00DB3A48 /* FriendTableViewCell.swift */; };
+		1956C259272FA7AB00DB3A48 /* SelectedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C234272FA7AB00DB3A48 /* SelectedHomeViewController.swift */; };
+		1956C25B272FA7AB00DB3A48 /* FollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956C236272FA7AB00DB3A48 /* FollowTableViewCell.xib */; };
+		1956C25C272FA7AB00DB3A48 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956C237272FA7AB00DB3A48 /* PostTableViewCell.xib */; };
+		1956C25D272FA7AB00DB3A48 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C238272FA7AB00DB3A48 /* ChallengeViewController.swift */; };
+		1956C25E272FA7AB00DB3A48 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C239272FA7AB00DB3A48 /* ImageSelectViewController.swift */; };
+		1956C25F272FA7AB00DB3A48 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C23A272FA7AB00DB3A48 /* MapSearchViewController.swift */; };
+		1956C260272FA7AB00DB3A48 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C23B272FA7AB00DB3A48 /* PostData.swift */; };
+		1956C261272FA7AB00DB3A48 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C23C272FA7AB00DB3A48 /* FollowTableViewCell.swift */; };
+		1956C262272FA7AB00DB3A48 /* FriendHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C23D272FA7AB00DB3A48 /* FriendHomeViewController.swift */; };
+		1956C263272FA7AB00DB3A48 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C23E272FA7AB00DB3A48 /* LoginViewController.swift */; };
+		1956C264272FA7AB00DB3A48 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956C23F272FA7AB00DB3A48 /* NotificationTableViewCell.xib */; };
+		1956C265272FA7AB00DB3A48 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C240272FA7AB00DB3A48 /* Notification.swift */; };
+		1956C266272FA7AB00DB3A48 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C241272FA7AB00DB3A48 /* NotificationViewController.swift */; };
+		1956C267272FA7AB00DB3A48 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C242272FA7AB00DB3A48 /* PostViewController.swift */; };
+		1956C268272FA7AB00DB3A48 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1956C243272FA7AB00DB3A48 /* FriendTableViewCell.xib */; };
+		1956C269272FA7AB00DB3A48 /* FriendMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C244272FA7AB00DB3A48 /* FriendMapViewController.swift */; };
+		1956C26A272FA7AB00DB3A48 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C245272FA7AB00DB3A48 /* Const.swift */; };
+		1956C26B272FA7AB00DB3A48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C246272FA7AB00DB3A48 /* MapViewController.swift */; };
+		1956C26C272FA7AB00DB3A48 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C247272FA7AB00DB3A48 /* Comment.swift */; };
+		1956C26D272FA7AB00DB3A48 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C248272FA7AB00DB3A48 /* FollowViewController.swift */; };
+		1956C26E272FA7AB00DB3A48 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C249272FA7AB00DB3A48 /* CommentViewController.swift */; };
+		1956C26F272FA7AB00DB3A48 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C24A272FA7AB00DB3A48 /* MyHomeViewController.swift */; };
+		1956C270272FA7AB00DB3A48 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C24B272FA7AB00DB3A48 /* TabBarController.swift */; };
+		53042CDE2731479B0049F996 /* 68898-cameras-and-photography (1).json in Resources */ = {isa = PBXBuildFile; fileRef = 53042CDD2731479A0049F996 /* 68898-cameras-and-photography (1).json */; };
+		53433C1427459AFD00CB3804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53433C1327459AFD00CB3804 /* ViewController.swift */; };
+		5344506F2755039F00B41DC7 /* AdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5344506E2755039F00B41DC7 /* AdressViewController.swift */; };
+		5344507127560BC000B41DC7 /* MaybeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5344507027560BC000B41DC7 /* MaybeViewController.swift */; };
+		534AC4A3274DA6AD008C6834 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534AC4A2274DA6AC008C6834 /* ReportViewController.swift */; };
+		53595747275DAAC300C3B4A3 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53595746275DAAC200C3B4A3 /* QRViewController.swift */; };
+		5373AAA027314A6C002BEC8F /* 68898-cameras-and-photography (2).json in Resources */ = {isa = PBXBuildFile; fileRef = 5373AA9F27314A6B002BEC8F /* 68898-cameras-and-photography (2).json */; };
+		5392B05627330EF700664B55 /* 42172-presents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5392B05527330EF600664B55 /* 42172-presents.json */; };
+		5392B05827330F1E00664B55 /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392B05727330F1E00664B55 /* PresentViewController.swift */; };
+		5392B05A273551F100664B55 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392B059273551F100664B55 /* ScrollViewController.swift */; };
+		5392B05C2735537E00664B55 /* 78072-map-pin-location.json in Resources */ = {isa = PBXBuildFile; fileRef = 5392B05B2735537D00664B55 /* 78072-map-pin-location.json */; };
+		5392B05E2735538A00664B55 /* 79913-walk-man.json in Resources */ = {isa = PBXBuildFile; fileRef = 5392B05D2735538A00664B55 /* 79913-walk-man.json */; };
+		5392B06027358B9500664B55 /* Amelia_logosample01-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5392B05F27358B9500664B55 /* Amelia_logosample01-1.jpg */; };
+		5392B0622736663E00664B55 /* HowToMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392B0612736663D00664B55 /* HowToMapViewController.swift */; };
+		5392B0632736809500664B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1956C1CA272FA32D00DB3A48 /* Assets.xcassets */; };
+		53CD3074275FC58400D341E0 /* GoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CD3073275FC58400D341E0 /* GoodViewController.swift */; };
+		53E4417C274DD16B003B1B31 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E4417A274DD16B003B1B31 /* ReportTableViewCell.swift */; };
+		53E4417D274DD16B003B1B31 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E4417B274DD16B003B1B31 /* ReportTableViewCell.xib */; };
+		53E441A1274E7713003B1B31 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E441A0274E7713003B1B31 /* TermsViewController.swift */; };
+		53E441A3274E7C39003B1B31 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E441A2274E7C39003B1B31 /* PrivacyViewController.swift */; };
+		53E441A5274FBA6F003B1B31 /* 27506-search-for-employee (2).json in Resources */ = {isa = PBXBuildFile; fileRef = 53E441A4274FBA6D003B1B31 /* 27506-search-for-employee (2).json */; };
+		53E441A7275092FC003B1B31 /* MyFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E441A6275092FB003B1B31 /* MyFavoriteViewController.swift */; };
+		53E441AA2750932A003B1B31 /* MyFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E441A82750932A003B1B31 /* MyFavoriteTableViewCell.swift */; };
+		53E441AB2750932A003B1B31 /* MyFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E441A92750932A003B1B31 /* MyFavoriteTableViewCell.xib */; };
+		53E441AD2750B42B003B1B31 /* MyFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E441AC2750B42A003B1B31 /* MyFavorite.swift */; };
+		53EDF7DC27586D6200EF5C18 /* MakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF7DB27586D6200EF5C18 /* MakeViewController.swift */; };
+		53EDF7DE2758D9C600EF5C18 /* DefaultImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF7DD2758D9C500EF5C18 /* DefaultImageViewController.swift */; };
+		53EDF7E227597C0500EF5C18 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EDF7E027597C0500EF5C18 /* FriendCollectionViewCell.swift */; };
+		53EDF7E327597C0500EF5C18 /* FriendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EDF7E127597C0500EF5C18 /* FriendCollectionViewCell.xib */; };
+		53F797DD2759B217006D007E /* EachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F797DC2759B216006D007E /* EachViewController.swift */; };
+		6524B02DB03F3EBDF9000DE2 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1995ECACBFD269D1759BDD8F /* Pods_Instagram.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1956C1BE272FA32B00DB3A48 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1956C1C1272FA32B00DB3A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1956C1C3272FA32B00DB3A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1956C1C8272FA32B00DB3A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1956C1CA272FA32D00DB3A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1956C1CD272FA32D00DB3A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1956C1CF272FA32D00DB3A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1956C227272FA7AB00DB3A48 /* RequestedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedViewController.swift; sourceTree = "<group>"; };
+		1956C228272FA7AB00DB3A48 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		1956C229272FA7AB00DB3A48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1956C22B272FA7AB00DB3A48 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		1956C22C272FA7AB00DB3A48 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		1956C22D272FA7AB00DB3A48 /* Following.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Following.swift; sourceTree = "<group>"; };
+		1956C22E272FA7AB00DB3A48 /* PostMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMapViewController.swift; sourceTree = "<group>"; };
+		1956C22F272FA7AB00DB3A48 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1956C230272FA7AB00DB3A48 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		1956C231272FA7AB00DB3A48 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1956C232272FA7AB00DB3A48 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		1956C233272FA7AB00DB3A48 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		1956C234272FA7AB00DB3A48 /* SelectedHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedHomeViewController.swift; sourceTree = "<group>"; };
+		1956C236272FA7AB00DB3A48 /* FollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowTableViewCell.xib; sourceTree = "<group>"; };
+		1956C237272FA7AB00DB3A48 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		1956C238272FA7AB00DB3A48 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		1956C239272FA7AB00DB3A48 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
+		1956C23A272FA7AB00DB3A48 /* MapSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
+		1956C23B272FA7AB00DB3A48 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		1956C23C272FA7AB00DB3A48 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
+		1956C23D272FA7AB00DB3A48 /* FriendHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendHomeViewController.swift; sourceTree = "<group>"; };
+		1956C23E272FA7AB00DB3A48 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1956C23F272FA7AB00DB3A48 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		1956C240272FA7AB00DB3A48 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		1956C241272FA7AB00DB3A48 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		1956C242272FA7AB00DB3A48 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		1956C243272FA7AB00DB3A48 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		1956C244272FA7AB00DB3A48 /* FriendMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendMapViewController.swift; sourceTree = "<group>"; };
+		1956C245272FA7AB00DB3A48 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		1956C246272FA7AB00DB3A48 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MapViewController.swift; sourceTree = "<group>"; };
+		1956C247272FA7AB00DB3A48 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		1956C248272FA7AB00DB3A48 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		1956C249272FA7AB00DB3A48 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		1956C24A272FA7AB00DB3A48 /* MyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
+		1956C24B272FA7AB00DB3A48 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1995ECACBFD269D1759BDD8F /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53042CDD2731479A0049F996 /* 68898-cameras-and-photography (1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "68898-cameras-and-photography (1).json"; path = "../../68898-cameras-and-photography (1).json"; sourceTree = "<group>"; };
+		5341EF4A273FEC3C004438BB /* InstagramRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramRelease.entitlements; sourceTree = "<group>"; };
+		53433C1327459AFD00CB3804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53433C152745CBF400CB3804 /* Instagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagram.entitlements; sourceTree = "<group>"; };
+		5344506E2755039F00B41DC7 /* AdressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressViewController.swift; sourceTree = "<group>"; };
+		5344507027560BC000B41DC7 /* MaybeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaybeViewController.swift; sourceTree = "<group>"; };
+		534AC4A2274DA6AC008C6834 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		53595746275DAAC200C3B4A3 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		5373AA9F27314A6B002BEC8F /* 68898-cameras-and-photography (2).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "68898-cameras-and-photography (2).json"; sourceTree = "<group>"; };
+		5392B05527330EF600664B55 /* 42172-presents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "42172-presents.json"; sourceTree = "<group>"; };
+		5392B05727330F1E00664B55 /* PresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
+		5392B059273551F100664B55 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		5392B05B2735537D00664B55 /* 78072-map-pin-location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "78072-map-pin-location.json"; sourceTree = "<group>"; };
+		5392B05D2735538A00664B55 /* 79913-walk-man.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79913-walk-man.json"; sourceTree = "<group>"; };
+		5392B05F27358B9500664B55 /* Amelia_logosample01-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Amelia_logosample01-1.jpg"; sourceTree = "<group>"; };
+		5392B0612736663D00664B55 /* HowToMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToMapViewController.swift; sourceTree = "<group>"; };
+		53CD3073275FC58400D341E0 /* GoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodViewController.swift; sourceTree = "<group>"; };
+		53E4417A274DD16B003B1B31 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		53E4417B274DD16B003B1B31 /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
+		53E441A0274E7713003B1B31 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		53E441A2274E7C39003B1B31 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		53E441A4274FBA6D003B1B31 /* 27506-search-for-employee (2).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "27506-search-for-employee (2).json"; sourceTree = "<group>"; };
+		53E441A6275092FB003B1B31 /* MyFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteViewController.swift; sourceTree = "<group>"; };
+		53E441A82750932A003B1B31 /* MyFavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		53E441A92750932A003B1B31 /* MyFavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		53E441AC2750B42A003B1B31 /* MyFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavorite.swift; sourceTree = "<group>"; };
+		53EDF7DB27586D6200EF5C18 /* MakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeViewController.swift; sourceTree = "<group>"; };
+		53EDF7DD2758D9C500EF5C18 /* DefaultImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageViewController.swift; sourceTree = "<group>"; };
+		53EDF7E027597C0500EF5C18 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		53EDF7E127597C0500EF5C18 /* FriendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCollectionViewCell.xib; sourceTree = "<group>"; };
+		53F797DC2759B216006D007E /* EachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachViewController.swift; sourceTree = "<group>"; };
+		68F71DBE5B2CA7DB78AED290 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
+		A245D59A3F1F37BAF330069C /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1956C1BB272FA32B00DB3A48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6524B02DB03F3EBDF9000DE2 /* Pods_Instagram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1956C1B5272FA32B00DB3A48 = {
+			isa = PBXGroup;
+			children = (
+				1956C1C0272FA32B00DB3A48 /* Instagram */,
+				1956C1BF272FA32B00DB3A48 /* Products */,
+				3624622AE0DD523B856A0225 /* Pods */,
+				EFBBFEBC444BCF1A400D9D0F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1956C1BF272FA32B00DB3A48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1956C1BE272FA32B00DB3A48 /* Instagram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1956C1C0272FA32B00DB3A48 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				5341EF4A273FEC3C004438BB /* InstagramRelease.entitlements */,
+				53433C152745CBF400CB3804 /* Instagram.entitlements */,
+				53EDF7DF27597B5100EF5C18 /* cell */,
+				1956C273272FA87A00DB3A48 /* Notification */,
+				1977BF51272FA8B800AF321C /* Follow */,
+				1977BF50272FA8AC00AF321C /* Comment */,
+				1956C272272FA86200DB3A48 /* Post */,
+				1956C271272FA85200DB3A48 /* Friend */,
+				5379769E2761AF15003A1926 /* Login */,
+				537976A02761AFAC003A1926 /* My */,
+				537976A22761B07B003A1926 /* Report */,
+				537976A12761B018003A1926 /* Map */,
+				53433C1327459AFD00CB3804 /* ViewController.swift */,
+				1956C245272FA7AB00DB3A48 /* Const.swift */,
+				1956C229272FA7AB00DB3A48 /* GoogleService-Info.plist */,
+				1956C239272FA7AB00DB3A48 /* ImageSelectViewController.swift */,
+				1956C231272FA7AB00DB3A48 /* HomeViewController.swift */,
+				5392B05F27358B9500664B55 /* Amelia_logosample01-1.jpg */,
+				1956C22F272FA7AB00DB3A48 /* SettingViewController.swift */,
+				53E441A4274FBA6D003B1B31 /* 27506-search-for-employee (2).json */,
+				5392B05D2735538A00664B55 /* 79913-walk-man.json */,
+				5392B05B2735537D00664B55 /* 78072-map-pin-location.json */,
+				1956C1C7272FA32B00DB3A48 /* Main.storyboard */,
+				1956C227272FA7AB00DB3A48 /* RequestedViewController.swift */,
+				53EDF7DD2758D9C500EF5C18 /* DefaultImageViewController.swift */,
+				5344507027560BC000B41DC7 /* MaybeViewController.swift */,
+				53E441A2274E7C39003B1B31 /* PrivacyViewController.swift */,
+				53E441A0274E7713003B1B31 /* TermsViewController.swift */,
+				53595746275DAAC200C3B4A3 /* QRViewController.swift */,
+				1956C234272FA7AB00DB3A48 /* SelectedHomeViewController.swift */,
+				5392B059273551F100664B55 /* ScrollViewController.swift */,
+				5392B05727330F1E00664B55 /* PresentViewController.swift */,
+				1956C24B272FA7AB00DB3A48 /* TabBarController.swift */,
+				1956C1C1272FA32B00DB3A48 /* AppDelegate.swift */,
+				1956C1C3272FA32B00DB3A48 /* SceneDelegate.swift */,
+				53042CDD2731479A0049F996 /* 68898-cameras-and-photography (1).json */,
+				5373AA9F27314A6B002BEC8F /* 68898-cameras-and-photography (2).json */,
+				5392B05527330EF600664B55 /* 42172-presents.json */,
+				1956C1CA272FA32D00DB3A48 /* Assets.xcassets */,
+				1956C1CC272FA32D00DB3A48 /* LaunchScreen.storyboard */,
+				1956C1CF272FA32D00DB3A48 /* Info.plist */,
+				53CD3073275FC58400D341E0 /* GoodViewController.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		1956C271272FA85200DB3A48 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				1956C23D272FA7AB00DB3A48 /* FriendHomeViewController.swift */,
+				1956C244272FA7AB00DB3A48 /* FriendMapViewController.swift */,
+				1956C233272FA7AB00DB3A48 /* FriendTableViewCell.swift */,
+				1956C243272FA7AB00DB3A48 /* FriendTableViewCell.xib */,
+				1956C228272FA7AB00DB3A48 /* FriendViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		1956C272272FA86200DB3A48 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				1956C22E272FA7AB00DB3A48 /* PostMapViewController.swift */,
+				1956C23B272FA7AB00DB3A48 /* PostData.swift */,
+				1956C232272FA7AB00DB3A48 /* PostTableViewCell.swift */,
+				1956C237272FA7AB00DB3A48 /* PostTableViewCell.xib */,
+				1956C242272FA7AB00DB3A48 /* PostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		1956C273272FA87A00DB3A48 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				1956C240272FA7AB00DB3A48 /* Notification.swift */,
+				1956C230272FA7AB00DB3A48 /* NotificationTableViewCell.swift */,
+				1956C23F272FA7AB00DB3A48 /* NotificationTableViewCell.xib */,
+				1956C241272FA7AB00DB3A48 /* NotificationViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		1977BF50272FA8AC00AF321C /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				1956C247272FA7AB00DB3A48 /* Comment.swift */,
+				1956C22B272FA7AB00DB3A48 /* CommentTableViewCell.swift */,
+				1956C22C272FA7AB00DB3A48 /* CommentTableViewCell.xib */,
+				1956C249272FA7AB00DB3A48 /* CommentViewController.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		1977BF51272FA8B800AF321C /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				1956C22D272FA7AB00DB3A48 /* Following.swift */,
+				1956C23C272FA7AB00DB3A48 /* FollowTableViewCell.swift */,
+				1956C236272FA7AB00DB3A48 /* FollowTableViewCell.xib */,
+				1956C248272FA7AB00DB3A48 /* FollowViewController.swift */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		3624622AE0DD523B856A0225 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68F71DBE5B2CA7DB78AED290 /* Pods-Instagram.debug.xcconfig */,
+				A245D59A3F1F37BAF330069C /* Pods-Instagram.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5379769E2761AF15003A1926 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1956C23E272FA7AB00DB3A48 /* LoginViewController.swift */,
+				53EDF7DB27586D6200EF5C18 /* MakeViewController.swift */,
+				5344506E2755039F00B41DC7 /* AdressViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		537976A02761AFAC003A1926 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				53E441AC2750B42A003B1B31 /* MyFavorite.swift */,
+				1956C24A272FA7AB00DB3A48 /* MyHomeViewController.swift */,
+				53E441A6275092FB003B1B31 /* MyFavoriteViewController.swift */,
+				53E441A82750932A003B1B31 /* MyFavoriteTableViewCell.swift */,
+				53E441A92750932A003B1B31 /* MyFavoriteTableViewCell.xib */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		537976A12761B018003A1926 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5392B0612736663D00664B55 /* HowToMapViewController.swift */,
+				1956C23A272FA7AB00DB3A48 /* MapSearchViewController.swift */,
+				1956C246272FA7AB00DB3A48 /* MapViewController.swift */,
+				1956C238272FA7AB00DB3A48 /* ChallengeViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		537976A22761B07B003A1926 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				534AC4A2274DA6AC008C6834 /* ReportViewController.swift */,
+				53E4417B274DD16B003B1B31 /* ReportTableViewCell.xib */,
+				53E4417A274DD16B003B1B31 /* ReportTableViewCell.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		53EDF7DF27597B5100EF5C18 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				53EDF7E027597C0500EF5C18 /* FriendCollectionViewCell.swift */,
+				53EDF7E127597C0500EF5C18 /* FriendCollectionViewCell.xib */,
+				53F797DC2759B216006D007E /* EachViewController.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		EFBBFEBC444BCF1A400D9D0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1995ECACBFD269D1759BDD8F /* Pods_Instagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1956C1BD272FA32B00DB3A48 /* Instagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1956C1D2272FA32D00DB3A48 /* Build configuration list for PBXNativeTarget "Instagram" */;
+			buildPhases = (
+				715E5BADFC6568329D70A16C /* [CP] Check Pods Manifest.lock */,
+				1956C1BA272FA32B00DB3A48 /* Sources */,
+				1956C1BB272FA32B00DB3A48 /* Frameworks */,
+				1956C1BC272FA32B00DB3A48 /* Resources */,
+				2AD9A00CA87C02ED371C7DB2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Instagram;
+			productName = Instagram;
+			productReference = 1956C1BE272FA32B00DB3A48 /* Instagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1956C1B6272FA32B00DB3A48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					1956C1BD272FA32B00DB3A48 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 1956C1B9272FA32B00DB3A48 /* Build configuration list for PBXProject "Instagram" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1956C1B5272FA32B00DB3A48;
+			productRefGroup = 1956C1BF272FA32B00DB3A48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1956C1BD272FA32B00DB3A48 /* Instagram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1956C1BC272FA32B00DB3A48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1956C1CE272FA32D00DB3A48 /* LaunchScreen.storyboard in Resources */,
+				53E441AB2750932A003B1B31 /* MyFavoriteTableViewCell.xib in Resources */,
+				5392B05627330EF700664B55 /* 42172-presents.json in Resources */,
+				5392B06027358B9500664B55 /* Amelia_logosample01-1.jpg in Resources */,
+				1956C24E272FA7AB00DB3A48 /* GoogleService-Info.plist in Resources */,
+				5392B05C2735537E00664B55 /* 78072-map-pin-location.json in Resources */,
+				1956C25B272FA7AB00DB3A48 /* FollowTableViewCell.xib in Resources */,
+				1956C268272FA7AB00DB3A48 /* FriendTableViewCell.xib in Resources */,
+				53E4417D274DD16B003B1B31 /* ReportTableViewCell.xib in Resources */,
+				1956C1C9272FA32B00DB3A48 /* Main.storyboard in Resources */,
+				53EDF7E327597C0500EF5C18 /* FriendCollectionViewCell.xib in Resources */,
+				1956C251272FA7AB00DB3A48 /* CommentTableViewCell.xib in Resources */,
+				53042CDE2731479B0049F996 /* 68898-cameras-and-photography (1).json in Resources */,
+				1956C25C272FA7AB00DB3A48 /* PostTableViewCell.xib in Resources */,
+				53E441A5274FBA6F003B1B31 /* 27506-search-for-employee (2).json in Resources */,
+				1956C264272FA7AB00DB3A48 /* NotificationTableViewCell.xib in Resources */,
+				5373AAA027314A6C002BEC8F /* 68898-cameras-and-photography (2).json in Resources */,
+				5392B0632736809500664B55 /* Assets.xcassets in Resources */,
+				5392B05E2735538A00664B55 /* 79913-walk-man.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AD9A00CA87C02ED371C7DB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		715E5BADFC6568329D70A16C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Instagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1956C1BA272FA32B00DB3A48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E441AA2750932A003B1B31 /* MyFavoriteTableViewCell.swift in Sources */,
+				53EDF7DC27586D6200EF5C18 /* MakeViewController.swift in Sources */,
+				1956C259272FA7AB00DB3A48 /* SelectedHomeViewController.swift in Sources */,
+				1956C266272FA7AB00DB3A48 /* NotificationViewController.swift in Sources */,
+				53E441A3274E7C39003B1B31 /* PrivacyViewController.swift in Sources */,
+				1956C26F272FA7AB00DB3A48 /* MyHomeViewController.swift in Sources */,
+				1956C267272FA7AB00DB3A48 /* PostViewController.swift in Sources */,
+				1956C265272FA7AB00DB3A48 /* Notification.swift in Sources */,
+				1956C257272FA7AB00DB3A48 /* PostTableViewCell.swift in Sources */,
+				1956C24C272FA7AB00DB3A48 /* RequestedViewController.swift in Sources */,
+				53595747275DAAC300C3B4A3 /* QRViewController.swift in Sources */,
+				5392B05A273551F100664B55 /* ScrollViewController.swift in Sources */,
+				1956C26A272FA7AB00DB3A48 /* Const.swift in Sources */,
+				1956C252272FA7AB00DB3A48 /* Following.swift in Sources */,
+				53E441A1274E7713003B1B31 /* TermsViewController.swift in Sources */,
+				53CD3074275FC58400D341E0 /* GoodViewController.swift in Sources */,
+				5344507127560BC000B41DC7 /* MaybeViewController.swift in Sources */,
+				53E441AD2750B42B003B1B31 /* MyFavorite.swift in Sources */,
+				1956C1C2272FA32B00DB3A48 /* AppDelegate.swift in Sources */,
+				1956C26C272FA7AB00DB3A48 /* Comment.swift in Sources */,
+				1956C260272FA7AB00DB3A48 /* PostData.swift in Sources */,
+				53F797DD2759B217006D007E /* EachViewController.swift in Sources */,
+				1956C25F272FA7AB00DB3A48 /* MapSearchViewController.swift in Sources */,
+				1956C254272FA7AB00DB3A48 /* SettingViewController.swift in Sources */,
+				1956C263272FA7AB00DB3A48 /* LoginViewController.swift in Sources */,
+				1956C250272FA7AB00DB3A48 /* CommentTableViewCell.swift in Sources */,
+				1956C253272FA7AB00DB3A48 /* PostMapViewController.swift in Sources */,
+				1956C25D272FA7AB00DB3A48 /* ChallengeViewController.swift in Sources */,
+				1956C1C4272FA32B00DB3A48 /* SceneDelegate.swift in Sources */,
+				53EDF7DE2758D9C600EF5C18 /* DefaultImageViewController.swift in Sources */,
+				1956C25E272FA7AB00DB3A48 /* ImageSelectViewController.swift in Sources */,
+				1956C24D272FA7AB00DB3A48 /* FriendViewController.swift in Sources */,
+				1956C26E272FA7AB00DB3A48 /* CommentViewController.swift in Sources */,
+				53EDF7E227597C0500EF5C18 /* FriendCollectionViewCell.swift in Sources */,
+				5392B05827330F1E00664B55 /* PresentViewController.swift in Sources */,
+				1956C270272FA7AB00DB3A48 /* TabBarController.swift in Sources */,
+				53433C1427459AFD00CB3804 /* ViewController.swift in Sources */,
+				1956C255272FA7AB00DB3A48 /* NotificationTableViewCell.swift in Sources */,
+				1956C269272FA7AB00DB3A48 /* FriendMapViewController.swift in Sources */,
+				53E441A7275092FC003B1B31 /* MyFavoriteViewController.swift in Sources */,
+				1956C256272FA7AB00DB3A48 /* HomeViewController.swift in Sources */,
+				1956C261272FA7AB00DB3A48 /* FollowTableViewCell.swift in Sources */,
+				1956C258272FA7AB00DB3A48 /* FriendTableViewCell.swift in Sources */,
+				1956C26D272FA7AB00DB3A48 /* FollowViewController.swift in Sources */,
+				534AC4A3274DA6AD008C6834 /* ReportViewController.swift in Sources */,
+				5392B0622736663E00664B55 /* HowToMapViewController.swift in Sources */,
+				1956C262272FA7AB00DB3A48 /* FriendHomeViewController.swift in Sources */,
+				53E4417C274DD16B003B1B31 /* ReportTableViewCell.swift in Sources */,
+				5344506F2755039F00B41DC7 /* AdressViewController.swift in Sources */,
+				1956C26B272FA7AB00DB3A48 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1956C1C7272FA32B00DB3A48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1956C1C8272FA32B00DB3A48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1956C1CC272FA32D00DB3A48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1956C1CD272FA32D00DB3A48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1956C1D0272FA32D00DB3A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1956C1D1272FA32D00DB3A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1956C1D3272FA32D00DB3A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F71DBE5B2CA7DB78AED290 /* Pods-Instagram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Instagram/Instagram.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = U6B6GTGPYT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Instagram/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Amelia!";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "投稿に使う写真を新しく撮影するには、カメラの使用許可が必要です。カメラの使用を許可しますか？";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSLocationUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "投稿に使う写真の取得には、写真へのアクセス許可が必要です。写真にアクセスしてもよろしいでしょうか?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "スコア達成時のギフト贈呈や、お問い合わせに使用されるユーザーのメールアドレスについての、安全性を確保するためにトラッキングを許可してください。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.rio.nagasaki.Instagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1956C1D4272FA32D00DB3A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A245D59A3F1F37BAF330069C /* Pods-Instagram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Instagram/InstagramRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = U6B6GTGPYT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Instagram/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Amelia!";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "投稿に使う写真を新しく撮影するには、カメラの使用許可が必要です。カメラの使用を許可しますか？";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSLocationUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を取得して、投稿スポットとの距離を取得します。位置情報を使用を許可しますか？";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "投稿に使う写真の取得には、写真へのアクセス許可が必要です。写真にアクセスしてもよろしいでしょうか?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "スコア達成時のギフト贈呈や、お問い合わせに使用されるユーザーのメールアドレスについての、安全性を確保するためにトラッキングを許可してください。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.rio.nagasaki.Instagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1956C1B9272FA32B00DB3A48 /* Build configuration list for PBXProject "Instagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1956C1D0272FA32D00DB3A48 /* Debug */,
+				1956C1D1272FA32D00DB3A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1956C1D2272FA32D00DB3A48 /* Build configuration list for PBXNativeTarget "Instagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1956C1D3272FA32D00DB3A48 /* Debug */,
+				1956C1D4272FA32D00DB3A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1956C1B6272FA32B00DB3A48 /* Project object */;
+}
