@@ -16,6 +16,9 @@ class FriendViewController: UIViewController, UITableViewDataSource, UITableView
     var listener: ListenerRegistration?
     var selectedFollowArray: [Following] = [Following]()
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+   
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -37,41 +40,15 @@ class FriendViewController: UIViewController, UITableViewDataSource, UITableView
     
     @objc func friendMap(_sender: UIButton, forEvent event: UIEvent){
         
-        let alert = UIAlertController(title: "友達の詳細", message: "友達の投稿が見れます。", preferredStyle: .actionSheet)
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        let followData = selectedFollowArray[indexPath!.row]
+        let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Detail") as! detailViewController
+        detailViewController.userId = followData.id
+        self.present(detailViewController, animated: true, completion: nil)
         
-        let post = UIAlertAction(title: "投稿一覧", style: .default) { [self] (action) in
-            let touch = event.allTouches?.first
-            let point = touch!.location(in: self.tableView)
-            let indexPath = tableView.indexPathForRow(at: point)
-            let postData = selectedFollowArray[indexPath!.row]
-            let viewController = self.storyboard?.instantiateViewController(identifier: "Friend Home") as! ViewController
-            viewController.friendUid = postData.id
-            present(viewController, animated: true, completion: nil)
-        }
-        
-        let map = UIAlertAction(title: "マップ", style: .default) { [self] (action) in
-            let touch = event.allTouches?.first
-            let point = touch!.location(in: self.tableView)
-            let indexPath = tableView.indexPathForRow(at: point)
-            let followData = selectedFollowArray[indexPath!.row]
-            let friendMapViewController = self.storyboard?.instantiateViewController(identifier: "Friend") as! FriendMapViewController
-            friendMapViewController.id = followData.id
-            present(friendMapViewController, animated: true, completion: nil)
-        }
-        
-        let cancel: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.default, handler: {_ in
-            alert.dismiss(animated: true, completion: nil)
-        })
-        
-       
-        
-        
-        alert.addAction(post)
-        alert.addAction(map)
-        alert.addAction(cancel)
-        present(alert, animated: true, completion: nil)
-       
-    }
+}
     
     
     
@@ -82,29 +59,12 @@ class FriendViewController: UIViewController, UITableViewDataSource, UITableView
         let indexPath = tableView.indexPathForRow(at: point)
         let followData = selectedFollowArray[indexPath!.row]
         
-        let alert: UIAlertController = UIAlertController(title: "友達の削除", message: "友達を削除します。本当に削除してもよろしいですか?", preferredStyle: UIAlertController.Style.alert)
+             let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "popoverVC") as! PopoverViewController
+        popoverVC.userId = followData.id
+        self.present(popoverVC, animated: true, completion: nil)
+         
         
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.default, handler: {_ in
-            alert.dismiss(animated: true, completion: nil)
-        })
-        
-        let defaultAction: UIAlertAction = UIAlertAction(title: "確定", style: UIAlertAction.Style.default, handler: {_ in
-        if let myid = Auth.auth().currentUser?.uid{
-            var updateValue: FieldValue
-            var updateValue2: FieldValue
-            updateValue = FieldValue.arrayRemove([myid])
-            updateValue2 = FieldValue.arrayRemove([followData.id])
-            let followRef = Firestore.firestore().collection(Const.FollowPath).document(followData.id)
-            followRef.updateData(["follow": updateValue])
-            let followRef2 = Firestore.firestore().collection(Const.FollowPath).document(myid)
-            followRef2.updateData(["follow": updateValue2])
-            
-        }
-        }
-        )
-        alert.addAction(defaultAction)
-        alert.addAction(cancelAction)
-        present(alert, animated: true, completion: nil)
+
     }
     
     var refreshControl:UIRefreshControl!
@@ -132,6 +92,8 @@ class FriendViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let uid = Auth.auth().currentUser?.uid
@@ -148,6 +110,8 @@ class FriendViewController: UIViewController, UITableViewDataSource, UITableView
                     print("DEBUG_PRINT: document取得 \(document.documentID)")
                     let followData = Following(document: document)
                     guard followData.name != nil else { return nil }
+                    if uid == followData.id {
+                        self.nameLabel.text = followData.name }
                     let follow = followData.follow
                     if follow.firstIndex(of: uid!) != nil {
                         self.selectedFollowArray.append(followData)

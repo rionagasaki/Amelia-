@@ -50,9 +50,9 @@ class FollowTableViewCell: UITableViewCell {
         
         if following.isFollowed == false{
             handleFollow.setTitle("フォローする", for: .normal)
-            handleFollow.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+            handleFollow.setTitleColor(UIColor.black, for: .normal)
         }else{
-            handleFollow.setTitle("リクエスト", for: .normal)
+            handleFollow.setTitle("リクエスト中", for: .normal)
             handleFollow.setTitleColor(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), for: .normal)
         }
         

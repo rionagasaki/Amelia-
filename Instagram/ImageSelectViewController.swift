@@ -67,9 +67,7 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
     
     
     
-    @IBAction func handleCancelButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    
     
     
     
@@ -89,26 +87,22 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
        
         libraryButton.layer.cornerRadius = 15.0
         cameraButton.layer.cornerRadius = 15.0
-        cancelButton.layer.cornerRadius = 15.0
-        
+
+
         libraryButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         libraryButton.layer.shadowColor = UIColor.black.cgColor
         libraryButton.layer.shadowOpacity = 0.5
         libraryButton.layer.shadowRadius = 4
         libraryButton.alpha = 0.9
-        
-        
+
+
         cameraButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         cameraButton.layer.shadowColor = UIColor.black.cgColor
         cameraButton.layer.shadowOpacity = 0.5
         cameraButton.layer.shadowRadius = 4
         cameraButton.alpha = 0.9
         
-        cancelButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-        cancelButton.layer.shadowColor = UIColor.black.cgColor
-        cancelButton.layer.shadowOpacity = 0.5
-        cancelButton.layer.shadowRadius = 4
-        cancelButton.alpha = 0.9
+
        
        
         self.overrideUserInterfaceStyle = .light

@@ -14,9 +14,9 @@ import SVProgressHUD
 class MapSearchViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate{
     
     
-    @IBOutlet weak var searchLocation: UISearchBar!
+    @IBOutlet private weak var searchLocation: UISearchBar!
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet private weak var mapView: MKMapView!
     
     
     var searchedMapItems:[MKMapItem]! = []

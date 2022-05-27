@@ -33,18 +33,14 @@ class FollowViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     
-    @IBAction func RequestButton(_ sender: Any) {
-        let requestedViewController = self.storyboard?.instantiateViewController(withIdentifier: "Request")as! RequestedViewController
-        
-        self.present(requestedViewController, animated: true, completion: nil)
-    }
+   
     
-    
-    @IBAction func FriendButton(_ sender: Any) {
+    @IBAction func menuButton(_ sender: Any) {
         
-        let friendViewController = self.storyboard?.instantiateViewController(withIdentifier: "GoodFriend")as! FriendViewController
+        let menuViewController = self.storyboard?.instantiateViewController(withIdentifier: "Menu")as! MenuViewController
         
-        self.present(friendViewController, animated: true, completion: nil)
+        self.present(menuViewController, animated: true, completion: nil)
+        
         
         
     }
@@ -55,13 +51,7 @@ class FollowViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    @IBAction func qrButton(_ sender: Any) {
-        let qrViewController = self.storyboard?.instantiateViewController(withIdentifier: "QR")as! QRViewController
-        
-        self.present(qrViewController, animated: true, completion: nil)
-        
-        
-    }
+   
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =

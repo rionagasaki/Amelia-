@@ -16,6 +16,7 @@ class NotificationTableViewCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var notificationLabel: UILabel!
     @IBOutlet weak var notificationTimeLabel: UILabel!
+    @IBOutlet weak var deleteNotification: UIButton!
     
     
     
@@ -28,6 +29,9 @@ class NotificationTableViewCell: UITableViewCell {
         
         postImage.layer.borderWidth = 1
         postImage.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        deleteNotification.layer.cornerRadius = 15.0
+        deleteNotification.layer.borderWidth = 1
+        deleteNotification.layer.borderColor = UIColor.black.cgColor
        
     }
 

@@ -107,6 +107,7 @@ class MyHomeViewController: UIViewController, UICollectionViewDelegate, UICollec
             if followData.introduce != nil {
                 self.textView.text = followData.introduce
             }
+            if updateCount == nil { return }
             let stringCount:String = updateCount!.description
             let storageRef = Storage.storage().reference().child("profile_image").child(uid! + stringCount)
             self.myImage.sd_imageIndicator = SDWebImageActivityIndicator.gray

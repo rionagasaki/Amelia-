@@ -30,21 +30,79 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
             tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NotificationTableViewCell
         cell.setNotify(selectedNotification[indexPath.row])
         cell.notificationButton.addTarget(self, action:#selector(notificationButton(_:forEvent:)) , for: .touchUpInside)
+        cell.deleteNotification.addTarget(self, action:#selector(deleteNotification(_:forEvent:)) , for: .touchUpInside)
       
         
         return cell
     }
     
+    @objc func deleteNotification(_ sender: UIButton, forEvent event: UIEvent){
+        
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        let uid = Auth.auth().currentUser?.uid
+        let notifyData = selectedNotification[indexPath!.row]
+        let notificationRef2 = Firestore.firestore().collection(Const.NotificationPath).whereField("uid", isEqualTo: uid!)
+
+        let notificationRef = Firestore.firestore().collection(Const.NotificationPath).document(notifyData.id!)
+        notificationRef.delete(){ error in
+            if error != nil {
+                return
+            }
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+            generator.prepare()
+            print("delete成功")
+            self.reload()
+            self.tableView.reloadData()
+            notificationRef2.getDocuments{ (snap, error) in
+                if error != nil {
+                    return
+                }
+                if snap?.count != 0 {
+                    let tabBarController = TabBarController()
+                    tabBarController.tabBar.items![0].badgeValue = "\((snap?.count)!)"
+                }
+        }
+        }
+    }
+        
+        
+       
+    
+    func reload(){
+        let uid = Auth.auth().currentUser?.uid
+               let postRef = Firestore.firestore().collection(Const.NotificationPath).whereField("uid", isEqualTo: uid!).order(by: "date", descending: true).limit(to: 10)
+        postRef.getDocuments{
+            (querySnapshot, error) in
+            if error != nil{
+                print("エラーエラー\(error)")
+                return
+            }
+            self.selectedNotification = []
+            self.notificationArray = querySnapshot!.documents.map{
+                document in
+                let notifyData = Notification(document: document)
+                if notifyData.uid2 != uid {
+                    self.selectedNotification.append(notifyData)
+                   
+                }
+                
+                return notifyData
+            }
+            self.tableView.reloadData()
+            
+        
+    }
+    }
+    
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete{
-            self.selectedNotification.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
-    }
+   
     
     @objc func notificationButton(_ sender: UIButton, forEvent event: UIEvent){
         
@@ -66,7 +124,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let uid = Auth.auth().currentUser?.uid
-        let postRef = Firestore.firestore().collection(Const.NotificationPath).whereField("uid", isEqualTo: uid!).order(by: "date", descending: true).limit(to: 10)
+               let postRef = Firestore.firestore().collection(Const.NotificationPath).whereField("uid", isEqualTo: uid!).order(by: "date", descending: true).limit(to: 10)
         postRef.getDocuments{
             (querySnapshot, error) in
             if error != nil{

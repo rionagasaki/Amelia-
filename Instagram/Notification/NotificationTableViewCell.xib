@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A11-lo-lcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="79"/>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H1Y-tQ-XVx">
                         <rect key="frame" x="5" y="5" width="40" height="40"/>
@@ -46,21 +47,30 @@
                         <color key="textColor" systemColor="opaqueSeparatorColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgc-79-qIm">
+                        <rect key="frame" x="262" y="54" width="53" height="19"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="削除"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8aS-N1-eHi" secondAttribute="bottom" constant="5" id="17s-0f-fFy"/>
                     <constraint firstItem="H1Y-tQ-XVx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1HL-if-NZD"/>
+                    <constraint firstAttribute="bottom" secondItem="qgc-79-qIm" secondAttribute="bottom" constant="6" id="3mU-6b-nN6"/>
                     <constraint firstItem="A11-lo-lcZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7cd-9f-Pie"/>
                     <constraint firstItem="A11-lo-lcZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9c0-4R-434"/>
                     <constraint firstItem="TYw-PW-Gow" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DOi-Et-ct9"/>
                     <constraint firstItem="8aS-N1-eHi" firstAttribute="top" secondItem="H1Y-tQ-XVx" secondAttribute="bottom" constant="8" symbolic="YES" id="Dvs-Ar-r8F"/>
                     <constraint firstItem="A11-lo-lcZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="K47-pc-Uv4"/>
+                    <constraint firstItem="qgc-79-qIm" firstAttribute="top" secondItem="FsH-rl-qns" secondAttribute="bottom" constant="9" id="L4V-fC-3wQ"/>
+                    <constraint firstAttribute="trailing" secondItem="qgc-79-qIm" secondAttribute="trailing" constant="5" id="NZD-LP-0FW"/>
                     <constraint firstAttribute="trailing" secondItem="FsH-rl-qns" secondAttribute="trailing" constant="5" id="O6e-Cg-Moa"/>
                     <constraint firstItem="8aS-N1-eHi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Obp-pl-LZb"/>
                     <constraint firstItem="FsH-rl-qns" firstAttribute="leading" secondItem="TYw-PW-Gow" secondAttribute="trailing" constant="10" id="RtU-Ne-dJV"/>
+                    <constraint firstItem="FsH-rl-qns" firstAttribute="leading" secondItem="A11-lo-lcZ" secondAttribute="trailing" constant="150" id="aEl-xH-L9o"/>
                     <constraint firstItem="H1Y-tQ-XVx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ouN-Gz-vZf"/>
                     <constraint firstItem="FsH-rl-qns" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="p5X-43-mBc"/>
-                    <constraint firstAttribute="trailing" secondItem="A11-lo-lcZ" secondAttribute="trailing" id="rnb-Oh-CEi"/>
                     <constraint firstItem="TYw-PW-Gow" firstAttribute="leading" secondItem="H1Y-tQ-XVx" secondAttribute="trailing" constant="10" id="tNn-Me-526"/>
                     <constraint firstAttribute="bottom" secondItem="A11-lo-lcZ" secondAttribute="bottom" id="uPP-Mw-kGT"/>
                     <constraint firstAttribute="bottom" secondItem="FsH-rl-qns" secondAttribute="bottom" constant="34" id="wUP-he-yFN"/>
@@ -68,16 +78,20 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="deleteNotification" destination="qgc-79-qIm" id="OUi-HD-R9J"/>
                 <outlet property="notificationButton" destination="A11-lo-lcZ" id="NSE-yk-tmg"/>
                 <outlet property="notificationLabel" destination="TYw-PW-Gow" id="qIF-bh-WuQ"/>
                 <outlet property="notificationTimeLabel" destination="8aS-N1-eHi" id="WaT-07-VMJ"/>
                 <outlet property="postImage" destination="FsH-rl-qns" id="O4a-zz-RPq"/>
                 <outlet property="profileImage" destination="H1Y-tQ-XVx" id="oaq-uJ-k7l"/>
             </connections>
-            <point key="canvasLocation" x="48" y="-28"/>
+            <point key="canvasLocation" x="-552.17391304347825" y="49.888392857142854"/>
         </tableViewCell>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

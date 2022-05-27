@@ -46,11 +46,22 @@
 		1956C26E272FA7AB00DB3A48 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C249272FA7AB00DB3A48 /* CommentViewController.swift */; };
 		1956C26F272FA7AB00DB3A48 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C24A272FA7AB00DB3A48 /* MyHomeViewController.swift */; };
 		1956C270272FA7AB00DB3A48 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956C24B272FA7AB00DB3A48 /* TabBarController.swift */; };
-		53042CDE2731479B0049F996 /* 68898-cameras-and-photography (1).json in Resources */ = {isa = PBXBuildFile; fileRef = 53042CDD2731479A0049F996 /* 68898-cameras-and-photography (1).json */; };
 		53433C1427459AFD00CB3804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53433C1327459AFD00CB3804 /* ViewController.swift */; };
 		5344506F2755039F00B41DC7 /* AdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5344506E2755039F00B41DC7 /* AdressViewController.swift */; };
 		5344507127560BC000B41DC7 /* MaybeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5344507027560BC000B41DC7 /* MaybeViewController.swift */; };
 		534AC4A3274DA6AD008C6834 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534AC4A2274DA6AC008C6834 /* ReportViewController.swift */; };
+		53520CCF27717F0B0014CE60 /* AppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53520CCE27717F0B0014CE60 /* AppleViewController.swift */; };
+		5356F2B2276888B70051914E /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356F2B1276888B70051914E /* PopoverViewController.swift */; };
+		5356F2B42768B40A0051914E /* FirstMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356F2B32768B40A0051914E /* FirstMovieViewController.swift */; };
+		5356F2B82768C53F0051914E /* pexels-rodnae-productions-5848367.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5356F2B72768C53C0051914E /* pexels-rodnae-productions-5848367.mp4 */; };
+		5356F2BA2768CD5F0051914E /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356F2B92768CD5F0051914E /* detailViewController.swift */; };
+		5356F2BC2768D7360051914E /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5356F2BB2768D7350051914E /* home.jpg */; };
+		5356F2BE2768D8BB0051914E /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5356F2BD2768D8B80051914E /* map.jpg */; };
+		5356F2C02768EE870051914E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356F2BF2768EE860051914E /* MenuViewController.swift */; };
+		5356F2C2276901BA0051914E /* camera2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5356F2C1276901B80051914E /* camera2.jpeg */; };
+		5356F2C4276903200051914E /* book2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5356F2C32769031F0051914E /* book2.png */; };
+		5356F2E72769E6680051914E /* GoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356F2E52769E6670051914E /* GoodTableViewCell.swift */; };
+		5356F2E82769E6680051914E /* GoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5356F2E62769E6670051914E /* GoodTableViewCell.xib */; };
 		53595747275DAAC300C3B4A3 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53595746275DAAC200C3B4A3 /* QRViewController.swift */; };
 		5373AAA027314A6C002BEC8F /* 68898-cameras-and-photography (2).json in Resources */ = {isa = PBXBuildFile; fileRef = 5373AA9F27314A6B002BEC8F /* 68898-cameras-and-photography (2).json */; };
 		5392B05627330EF700664B55 /* 42172-presents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5392B05527330EF600664B55 /* 42172-presents.json */; };
@@ -123,13 +134,24 @@
 		1956C24A272FA7AB00DB3A48 /* MyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
 		1956C24B272FA7AB00DB3A48 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1995ECACBFD269D1759BDD8F /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53042CDD2731479A0049F996 /* 68898-cameras-and-photography (1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "68898-cameras-and-photography (1).json"; path = "../../68898-cameras-and-photography (1).json"; sourceTree = "<group>"; };
 		5341EF4A273FEC3C004438BB /* InstagramRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramRelease.entitlements; sourceTree = "<group>"; };
 		53433C1327459AFD00CB3804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53433C152745CBF400CB3804 /* Instagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagram.entitlements; sourceTree = "<group>"; };
 		5344506E2755039F00B41DC7 /* AdressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressViewController.swift; sourceTree = "<group>"; };
 		5344507027560BC000B41DC7 /* MaybeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaybeViewController.swift; sourceTree = "<group>"; };
 		534AC4A2274DA6AC008C6834 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		53520CCE27717F0B0014CE60 /* AppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleViewController.swift; sourceTree = "<group>"; };
+		5356F2B1276888B70051914E /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		5356F2B32768B40A0051914E /* FirstMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMovieViewController.swift; sourceTree = "<group>"; };
+		5356F2B72768C53C0051914E /* pexels-rodnae-productions-5848367.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pexels-rodnae-productions-5848367.mp4"; sourceTree = "<group>"; };
+		5356F2B92768CD5F0051914E /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		5356F2BB2768D7350051914E /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		5356F2BD2768D8B80051914E /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
+		5356F2BF2768EE860051914E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5356F2C1276901B80051914E /* camera2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera2.jpeg; sourceTree = "<group>"; };
+		5356F2C32769031F0051914E /* book2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book2.png; sourceTree = "<group>"; };
+		5356F2E52769E6670051914E /* GoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTableViewCell.swift; sourceTree = "<group>"; };
+		5356F2E62769E6670051914E /* GoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodTableViewCell.xib; sourceTree = "<group>"; };
 		53595746275DAAC200C3B4A3 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		5373AA9F27314A6B002BEC8F /* 68898-cameras-and-photography (2).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "68898-cameras-and-photography (2).json"; sourceTree = "<group>"; };
 		5392B05527330EF600664B55 /* 42172-presents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "42172-presents.json"; sourceTree = "<group>"; };
@@ -193,6 +215,8 @@
 			children = (
 				5341EF4A273FEC3C004438BB /* InstagramRelease.entitlements */,
 				53433C152745CBF400CB3804 /* Instagram.entitlements */,
+				5356F2BB2768D7350051914E /* home.jpg */,
+				5356F2BD2768D8B80051914E /* map.jpg */,
 				53EDF7DF27597B5100EF5C18 /* cell */,
 				1956C273272FA87A00DB3A48 /* Notification */,
 				1977BF51272FA8B800AF321C /* Follow */,
@@ -203,14 +227,17 @@
 				537976A02761AFAC003A1926 /* My */,
 				537976A22761B07B003A1926 /* Report */,
 				537976A12761B018003A1926 /* Map */,
-				53433C1327459AFD00CB3804 /* ViewController.swift */,
+				5356F2E9276A3B420051914E /* Good */,
 				1956C245272FA7AB00DB3A48 /* Const.swift */,
+				53433C1327459AFD00CB3804 /* ViewController.swift */,
 				1956C229272FA7AB00DB3A48 /* GoogleService-Info.plist */,
 				1956C239272FA7AB00DB3A48 /* ImageSelectViewController.swift */,
 				1956C231272FA7AB00DB3A48 /* HomeViewController.swift */,
+				5356F2C1276901B80051914E /* camera2.jpeg */,
 				5392B05F27358B9500664B55 /* Amelia_logosample01-1.jpg */,
 				1956C22F272FA7AB00DB3A48 /* SettingViewController.swift */,
 				53E441A4274FBA6D003B1B31 /* 27506-search-for-employee (2).json */,
+				5356F2C32769031F0051914E /* book2.png */,
 				5392B05D2735538A00664B55 /* 79913-walk-man.json */,
 				5392B05B2735537D00664B55 /* 78072-map-pin-location.json */,
 				1956C1C7272FA32B00DB3A48 /* Main.storyboard */,
@@ -226,13 +253,11 @@
 				1956C24B272FA7AB00DB3A48 /* TabBarController.swift */,
 				1956C1C1272FA32B00DB3A48 /* AppDelegate.swift */,
 				1956C1C3272FA32B00DB3A48 /* SceneDelegate.swift */,
-				53042CDD2731479A0049F996 /* 68898-cameras-and-photography (1).json */,
 				5373AA9F27314A6B002BEC8F /* 68898-cameras-and-photography (2).json */,
 				5392B05527330EF600664B55 /* 42172-presents.json */,
 				1956C1CA272FA32D00DB3A48 /* Assets.xcassets */,
 				1956C1CC272FA32D00DB3A48 /* LaunchScreen.storyboard */,
 				1956C1CF272FA32D00DB3A48 /* Info.plist */,
-				53CD3073275FC58400D341E0 /* GoodViewController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -245,6 +270,8 @@
 				1956C233272FA7AB00DB3A48 /* FriendTableViewCell.swift */,
 				1956C243272FA7AB00DB3A48 /* FriendTableViewCell.xib */,
 				1956C228272FA7AB00DB3A48 /* FriendViewController.swift */,
+				5356F2B1276888B70051914E /* PopoverViewController.swift */,
+				5356F2B92768CD5F0051914E /* detailViewController.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -290,6 +317,7 @@
 				1956C23C272FA7AB00DB3A48 /* FollowTableViewCell.swift */,
 				1956C236272FA7AB00DB3A48 /* FollowTableViewCell.xib */,
 				1956C248272FA7AB00DB3A48 /* FollowViewController.swift */,
+				5356F2BF2768EE860051914E /* MenuViewController.swift */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -303,12 +331,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5356F2E9276A3B420051914E /* Good */ = {
+			isa = PBXGroup;
+			children = (
+				53CD3073275FC58400D341E0 /* GoodViewController.swift */,
+				5356F2E52769E6670051914E /* GoodTableViewCell.swift */,
+				5356F2E62769E6670051914E /* GoodTableViewCell.xib */,
+			);
+			path = Good;
+			sourceTree = "<group>";
+		};
 		5379769E2761AF15003A1926 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5356F2B72768C53C0051914E /* pexels-rodnae-productions-5848367.mp4 */,
 				1956C23E272FA7AB00DB3A48 /* LoginViewController.swift */,
 				53EDF7DB27586D6200EF5C18 /* MakeViewController.swift */,
 				5344506E2755039F00B41DC7 /* AdressViewController.swift */,
+				5356F2B32768B40A0051914E /* FirstMovieViewController.swift */,
+				53520CCE27717F0B0014CE60 /* AppleViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -424,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5356F2B82768C53F0051914E /* pexels-rodnae-productions-5848367.mp4 in Resources */,
 				1956C1CE272FA32D00DB3A48 /* LaunchScreen.storyboard in Resources */,
 				53E441AB2750932A003B1B31 /* MyFavoriteTableViewCell.xib in Resources */,
 				5392B05627330EF700664B55 /* 42172-presents.json in Resources */,
@@ -436,10 +478,14 @@
 				1956C1C9272FA32B00DB3A48 /* Main.storyboard in Resources */,
 				53EDF7E327597C0500EF5C18 /* FriendCollectionViewCell.xib in Resources */,
 				1956C251272FA7AB00DB3A48 /* CommentTableViewCell.xib in Resources */,
-				53042CDE2731479B0049F996 /* 68898-cameras-and-photography (1).json in Resources */,
 				1956C25C272FA7AB00DB3A48 /* PostTableViewCell.xib in Resources */,
 				53E441A5274FBA6F003B1B31 /* 27506-search-for-employee (2).json in Resources */,
+				5356F2BE2768D8BB0051914E /* map.jpg in Resources */,
+				5356F2C4276903200051914E /* book2.png in Resources */,
+				5356F2BC2768D7360051914E /* home.jpg in Resources */,
+				5356F2C2276901BA0051914E /* camera2.jpeg in Resources */,
 				1956C264272FA7AB00DB3A48 /* NotificationTableViewCell.xib in Resources */,
+				5356F2E82769E6680051914E /* GoodTableViewCell.xib in Resources */,
 				5373AAA027314A6C002BEC8F /* 68898-cameras-and-photography (2).json in Resources */,
 				5392B0632736809500664B55 /* Assets.xcassets in Resources */,
 				5392B05E2735538A00664B55 /* 79913-walk-man.json in Resources */,
@@ -500,6 +546,7 @@
 				1956C259272FA7AB00DB3A48 /* SelectedHomeViewController.swift in Sources */,
 				1956C266272FA7AB00DB3A48 /* NotificationViewController.swift in Sources */,
 				53E441A3274E7C39003B1B31 /* PrivacyViewController.swift in Sources */,
+				53520CCF27717F0B0014CE60 /* AppleViewController.swift in Sources */,
 				1956C26F272FA7AB00DB3A48 /* MyHomeViewController.swift in Sources */,
 				1956C267272FA7AB00DB3A48 /* PostViewController.swift in Sources */,
 				1956C265272FA7AB00DB3A48 /* Notification.swift in Sources */,
@@ -511,12 +558,14 @@
 				1956C252272FA7AB00DB3A48 /* Following.swift in Sources */,
 				53E441A1274E7713003B1B31 /* TermsViewController.swift in Sources */,
 				53CD3074275FC58400D341E0 /* GoodViewController.swift in Sources */,
+				5356F2B42768B40A0051914E /* FirstMovieViewController.swift in Sources */,
 				5344507127560BC000B41DC7 /* MaybeViewController.swift in Sources */,
 				53E441AD2750B42B003B1B31 /* MyFavorite.swift in Sources */,
 				1956C1C2272FA32B00DB3A48 /* AppDelegate.swift in Sources */,
 				1956C26C272FA7AB00DB3A48 /* Comment.swift in Sources */,
 				1956C260272FA7AB00DB3A48 /* PostData.swift in Sources */,
 				53F797DD2759B217006D007E /* EachViewController.swift in Sources */,
+				5356F2BA2768CD5F0051914E /* detailViewController.swift in Sources */,
 				1956C25F272FA7AB00DB3A48 /* MapSearchViewController.swift in Sources */,
 				1956C254272FA7AB00DB3A48 /* SettingViewController.swift in Sources */,
 				1956C263272FA7AB00DB3A48 /* LoginViewController.swift in Sources */,
@@ -538,10 +587,13 @@
 				1956C256272FA7AB00DB3A48 /* HomeViewController.swift in Sources */,
 				1956C261272FA7AB00DB3A48 /* FollowTableViewCell.swift in Sources */,
 				1956C258272FA7AB00DB3A48 /* FriendTableViewCell.swift in Sources */,
+				5356F2B2276888B70051914E /* PopoverViewController.swift in Sources */,
 				1956C26D272FA7AB00DB3A48 /* FollowViewController.swift in Sources */,
 				534AC4A3274DA6AD008C6834 /* ReportViewController.swift in Sources */,
 				5392B0622736663E00664B55 /* HowToMapViewController.swift in Sources */,
+				5356F2C02768EE870051914E /* MenuViewController.swift in Sources */,
 				1956C262272FA7AB00DB3A48 /* FriendHomeViewController.swift in Sources */,
+				5356F2E72769E6680051914E /* GoodTableViewCell.swift in Sources */,
 				53E4417C274DD16B003B1B31 /* ReportTableViewCell.swift in Sources */,
 				5344506F2755039F00B41DC7 /* AdressViewController.swift in Sources */,
 				1956C26B272FA7AB00DB3A48 /* MapViewController.swift in Sources */,
@@ -694,6 +746,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Instagram/Instagram.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = U6B6GTGPYT;
@@ -722,8 +775,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.rio.nagasaki.Instagram;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.rio.nagasaki.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -767,7 +821,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.rio.nagasaki.Instagram;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.rio.nagasaki.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

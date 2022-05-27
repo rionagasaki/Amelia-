@@ -7,7 +7,17 @@ import FirebaseStorageUI
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
-
+    @IBOutlet weak var newPost: UIButton!
+    
+    @IBOutlet weak var emptyLabel: UILabel!
+    @IBAction func new(_ sender: Any) {
+        let imageSelectViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageSelect")as! ImageSelectViewController
+        
+        self.present(imageSelectViewController, animated: true, completion: nil)
+    }
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var myHomeButton: UIButton!
 
@@ -17,7 +27,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var followArray: [Following] = []
     var selectedPostArray: [PostData] = []
     var notificationListener: ListenerRegistration?
-
+    
+    
 
     @IBAction func myHomeButton(_ sender: Any) {
         let myhomeViewController = (self.storyboard?.instantiateViewController(identifier: "My Home"))!
@@ -41,6 +52,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newPost.layer.cornerRadius = 30
+        newPost.layer.shadowOpacity = 0.7
+        newPost.layer.shadowRadius = 3
+        newPost.layer.shadowOffset = CGSize(width: 2, height: 2)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -58,7 +73,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         tableView.separatorColor = #colorLiteral(red: 0.09431516379, green: 0.2704899311, blue: 0.5240489244, alpha: 1)
         tableView.rowHeight = UITableView.automaticDimension
-
+        
+       
 
 
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
@@ -77,8 +93,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.overrideUserInterfaceStyle = .light
         let uid = Auth.auth().currentUser?.uid
         if uid == nil{
-            let loginViewController = self.storyboard?.instantiateViewController(identifier: "Login") as? LoginViewController
-            present(loginViewController!, animated: true, completion: nil)
+            let firstViewController = self.storyboard?.instantiateViewController(identifier: "Movie") as? FirstMovieViewController
+            present(firstViewController!, animated: true, completion: nil)
         }
 
 
@@ -89,7 +105,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-
+        
 
         let uid2 = UserDefaults.standard.string(forKey: "uid")
         if uid2 != Auth.auth().currentUser?.uid {
@@ -97,6 +113,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tableView.reloadData()
             print("カウント\(selectedPostArray.count)")
         }
+       
 
 
         print("DEBUG_PRINT: viewWillAppear")
@@ -139,6 +156,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                             return postData
                         }
                         self.tableView.reloadData()
+                        if self.selectedPostArray.count == 0{
+                            self.emptyLabel.isHidden = false
+                            self.tableView.bringSubviewToFront(self.emptyLabel)
+                            
+                        }else {
+                            self.emptyLabel.isHidden = true
+                        }
 
 
                     }
@@ -162,11 +186,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.reloadData()
     }
 
-
-
-
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedPostArray.count
     }
 
@@ -201,6 +221,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     
+//    @objc func goodDetail(_ sender: UIButton, forEvent event: UIEvent){
+//        print("いいね詳細")
+//        let touch = event.allTouches?.first
+//        let point = touch!.location(in: self.tableView)
+//        let indexPath = tableView.indexPathForRow(at: point)
+//        let postData = selectedPostArray[indexPath!.row]
+//        let goodViewController = self.storyboard?.instantiateViewController(withIdentifier: "Heart") as! GoodViewController
+//        
+//        goodViewController.likes = postData.likes
+//        goodViewController.postImage = postData.postImage!
+//        self.present(goodViewController, animated: true, completion: nil)
+//        
+//        
+//        
+//    }
+//    
    
     
     @objc func reportButton(_ sender: UIButton, forEvent event: UIEvent){
@@ -217,8 +253,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         let disappearAction: UIAlertAction = UIAlertAction(title: "ユーザーの削除", style: UIAlertAction.Style.default, handler: {_ in
-            let friendViewController = self.storyboard?.instantiateViewController(identifier: "GoodFriend") as! FriendViewController
-            self.present(friendViewController, animated: true, completion: nil)
+            let popoverViewController = self.storyboard?.instantiateViewController(identifier: "popoverVC") as! PopoverViewController
+            popoverViewController.userId = postData.uid
+            self.present(popoverViewController, animated: true, completion: nil)
             print("delete成功")
 
             }
@@ -334,10 +371,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     
     
-    @IBAction func userButton(_ sender: Any) {
-        let adressViewController = self.storyboard?.instantiateViewController(withIdentifier: "Adress") as! AdressViewController
-        self.present(adressViewController, animated: true, completion: nil)
-    }
+   
     
 
 

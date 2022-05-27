@@ -13,6 +13,7 @@ import Firebase
 class Following: NSObject {
     
     var name: String?
+    var email: String?
     //var address: String?
     var id: String = ""
     var profileImage: String?
@@ -32,6 +33,7 @@ class Following: NSObject {
         
         
         self.name = postDic["name"]as? String
+        self.email = postDic["email"]as? String
         
         if let request = postDic["requested"]as? [String]{
             self.requested = request
@@ -81,6 +83,8 @@ class Following: NSObject {
         let postDic = document.data()!
         
         self.name = (postDic["name"]as! String)
+        
+        self.email = (postDic["email"]as! String)
         self.introduce = postDic["introduce"]as? String
         
        // self.address = (postDic["address"]as! String)

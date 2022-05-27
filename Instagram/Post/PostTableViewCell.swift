@@ -48,7 +48,7 @@ class PostTableViewCell: UITableViewCell {
         postImageView.layer.shadowOpacity = 0.5
         postImageView.layer.shadowRadius = 4
         
-        goodDetail.alpha = 0
+        
         
         commentButton.layer.cornerRadius = 10.0
         

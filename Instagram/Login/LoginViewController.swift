@@ -13,16 +13,17 @@ import AdSupport
 import FirebaseFunctions
 import AuthenticationServices
 import CryptoKit
-import LineSDK
 
 
-class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding, LoginButtonDelegate  {
+
+class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding{
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return view.window!
     }
     
-    
+    var followArray: [Following] = []
+    var selectedFollowArray: [Following] = []
     
     @IBOutlet weak var MailField: UITextField!
     
@@ -36,7 +37,7 @@ class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, A
 
     
     
-    var followArray: [Following] = [Following]()
+    
     var listener: ListenerRegistration?
     
     fileprivate var currentNonce: String?
@@ -164,9 +165,8 @@ class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, A
                 
         }
     
-    func loginButton(_ button: LoginButton, didSucceedLogin loginResult: LoginResult) {
-        
-    }
+  
+    
     
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
@@ -183,6 +183,7 @@ class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, A
             }
             let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
             
+            
             Auth.auth().signIn(with: credential){ (authResult, error) in
                 if error != nil {
 
@@ -190,23 +191,49 @@ class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, A
                     print(error?.localizedDescription)
                     return
                 }
+                let email = Auth.auth().currentUser?.email
+                let mailRef = Firestore.firestore().collection(Const.FollowPath).whereField("email", isEqualTo: email!)
+                mailRef.getDocuments{ (snap, error) in
+                    if error != nil {
+                        return
+                    }
+                    if snap?.documents.count == 0 {
+                        let user = Auth.auth().currentUser
+                        user?.delete{ error in
+                            if error != nil {
+                                return
+                            }
+                            print("deleteしました")
+                        }
+                        try! Auth.auth().signOut()
+                        SVProgressHUD.showError(withStatus: "アカウントエラー")
+                      
+                    }else {
+                        SVProgressHUD.showSuccess(withStatus: "Ameliaへようこそ。")
+                             let generator = UINotificationFeedbackGenerator()
+                             generator.notificationOccurred(.success)
+                             
+                             
+                             
+                            
+                         
+                         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+                    }
+                    
+                }
                 
-               
-                SVProgressHUD.showSuccess(withStatus: "Ameliaへようこそ。")
-                    let generator = UINotificationFeedbackGenerator()
-                    generator.notificationOccurred(.success)
-                    
-                    
-                    
-                   
-                
-                UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+              
 
                 }
                 
                 
             }
-        }
+                   
+
+
+
+
+    }
     
     
     
@@ -224,7 +251,7 @@ class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, A
         let widthGap = (width - Float(signInButton.frame.width))/2
         self.signInButton.cornerRadius = 15.0
        
-        signInButton.frame = CGRect(x: CGFloat(widthGap), y: 490, width: 300, height: 40)
+        signInButton.frame = CGRect(x: CGFloat(widthGap), y: 450, width: 300, height: 40)
        
     }
     
@@ -351,24 +378,25 @@ class LoginViewController: UIViewController,ASAuthorizationControllerDelegate, A
         
         signInButton.addTarget(self, action: #selector(appleIDButtonpush), for: .touchUpInside)
         view.addSubview(signInButton)
-        let loginButton = LineSDK.LoginButton()
-           loginButton.delegate = self
-           
-           // Configuration for permissions and presenting.
-           loginButton.permissions = [.profile]
-           loginButton.presentingViewController = self
-           
-           // Add button to view and layout it.
-           view.addSubview(loginButton)
-           loginButton.translatesAutoresizingMaskIntoConstraints = false
-           loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-           loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        let loginButton = LineSDK.LoginButton()
+//           loginButton.delegate = self
+//
+//           // Configuration for permissions and presenting.
+//           loginButton.permissions = [.profile]
+//           loginButton.presentingViewController = self
+//
+//           // Add button to view and layout it.
+//           view.addSubview(loginButton)
+//           loginButton.translatesAutoresizingMaskIntoConstraints = false
+//           loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//           loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         self.overrideUserInterfaceStyle = .light
-        loginButton.layer.cornerRadius = 15.0
-       
+//        loginButton.layer.cornerRadius = 15.0
+//
         terms.layer.cornerRadius = 15.0
       
         privacy.layer.cornerRadius = 15.0
+        loginButton.layer.cornerRadius = 15.0
         
         loginButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         loginButton.layer.shadowColor = UIColor.black.cgColor

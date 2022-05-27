@@ -20,8 +20,54 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        guard let _ = (scene as? UIWindowScene) else { return }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = self.window
-        
-       
+        if let tabBarController = self.window?.rootViewController as? UITabBarController{
+
+            let settings = FirestoreSettings()
+            settings.isPersistenceEnabled = false
+            Firestore.firestore().settings = settings
+            
+            let uid = Auth.auth().currentUser?.uid
+            
+
+            
+
+
+
+            if uid != nil {
+                let notificationRef = Firestore.firestore().collection(Const.NotificationPath).whereField("uid", isEqualTo: uid!)
+                notificationRef.getDocuments{ (snap, error) in
+                    if error != nil {
+                        return
+                    }
+                    if snap?.count != 0 {
+                        tabBarController.tabBar.items![0].badgeValue = "\(snap?.count ?? 0)"
+                    } else {
+                        tabBarController.tabBar.items![0].badgeValue = nil
+                    }
+
+
+                }
+            let followRef = Firestore.firestore().collection(Const.FollowPath).document(uid!)
+            followRef.getDocument{ (snap, error) in
+                if error != nil {
+                    return
+                }
+                let followData = Following(document: snap!)
+                if followData.requested.count != 0 {
+                    tabBarController.tabBar.items![2].badgeValue = "\(followData.requested.count)"
+                } else {
+                    tabBarController.tabBar.items![0].badgeValue = nil
+                }
+
+            }
+            }
+
+
+
+
+        }
+
+
         
     }
     
@@ -80,16 +126,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>){
         _ = LoginManager.shared.application(.shared, open: URLContexts.first?.url)
+        
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+       
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+      
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -97,8 +146,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to undo the changes made on entering the background.
         if let tabBarController = self.window?.rootViewController as? UITabBarController{
             
+            let settings = FirestoreSettings()
+            settings.isPersistenceEnabled = false
+            Firestore.firestore().settings = settings
+            
             let uid = Auth.auth().currentUser?.uid
+            
+            
+            
             if uid != nil {
+                let notificationRef = Firestore.firestore().collection(Const.NotificationPath).whereField("uid", isEqualTo: uid!)
+                notificationRef.getDocuments{ (snap, error) in
+                    if error != nil {
+                        return
+                    }
+                    if snap?.count != 0 {
+                        tabBarController.tabBar.items![0].badgeValue = "\(snap?.count ?? 0)"
+                    } else {
+                        tabBarController.tabBar.items![0].badgeValue = nil
+                    }
+                    
+                    
+                }
             let followRef = Firestore.firestore().collection(Const.FollowPath).document(uid!)
             followRef.getDocument{ (snap, error) in
                 if error != nil {
@@ -107,6 +176,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let followData = Following(document: snap!)
                 if followData.requested.count != 0 {
                     tabBarController.tabBar.items![2].badgeValue = "\(followData.requested.count)"
+                } else {
+                    tabBarController.tabBar.items![0].badgeValue = nil
                 }
                 
             }
